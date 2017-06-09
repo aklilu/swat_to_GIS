@@ -143,6 +143,16 @@ for line in sub_results:
 		ascii_text_for_GW_Qmm = ascii_text_for_GW_Qmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[248:254]),2)) + " ") #GW_Qmm or baseflow
 		ascii_text_for_PET = ascii_text_for_PET.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[87:94]),2)) + " ") #PET
 		ascii_text_for_SURQ_CNTmm = ascii_text_for_SURQ_CNTmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[218:224]),2)) + " ") #SURQ_CNTmm
+			
+		ascii_text_for_replace = ascii_text_for_replace.replace(" " + str(int(line[5:9])) + " ", " " + str( round((float(line[98:104])+float(line[158:164])),2)) + " ")#ET+RVAP
+		ascii_text_for_SW_INITmm = ascii_text_for_SW_INITmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[108:114]),2)) + " ") #SW_INITmm
+		ascii_text_for_GW_RCHGmm = ascii_text_for_GW_RCHGmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[138:144]),2)) + " ") #GW_RCHGmm
+		ascii_text_for_PRECIPmm = ascii_text_for_PRECIPmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[48:54]),2)) + " ") #PRECIPmm
+		ascii_text_for_WYLDmm = ascii_text_for_WYLDmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[258:264]),2)) + " ") #WYLDmm
+		ascii_text_for_GW_Qmm = ascii_text_for_GW_Qmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[248:254]),2)) + " ") #GW_Qmm or baseflow
+		ascii_text_for_PET = ascii_text_for_PET.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[87:94]),2)) + " ") #PET
+		ascii_text_for_SURQ_CNTmm = ascii_text_for_SURQ_CNTmm.replace(" " + str(int(line[5:9])) + " ", " " + str(round(float(line[218:224]),2)) + " ") #SURQ_CNTmm
+	
 		count = count + 1
 	#print(line[23:24])
 	update_progress(count,len(sub_results)-10,22)
